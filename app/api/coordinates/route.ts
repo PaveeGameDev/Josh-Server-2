@@ -1,7 +1,6 @@
-// app/api/coordinates/route.ts
 import { NextResponse } from 'next/server'
-import { getLatestCoordinates } from '../move/route'
+import {getCoordinates} from "@/app/lib/coordinateStore";
 
 export async function GET() {
-    return NextResponse.json(getLatestCoordinates())
+    return NextResponse.json(getCoordinates())
 }
